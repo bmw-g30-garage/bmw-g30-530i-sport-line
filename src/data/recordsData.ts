@@ -5343,7 +5343,7 @@ export const ALL_RECORDS: CarRecord[] = [
     telecomCost: 0,
     tuningCost: 0,
     totalCost: 16608,
-    notes: '🔰 知名產險 [ 線上投保/續保 丙式車險 ]\n\n📋 承保內容明細：丙式車體損失險、竊盜險、超額責任險 2,000 萬、第三人責任險及道路救援附加條款'
+    notes: '🔰 知名產險 [ 線上投保/續保 丙式車險 ]\n\n📋 保單承保明細：\n• 09 車體損失保險丙式(E;P) 財產損失保險金 78.4萬 自負額0\n• 11 汽車竊盜損失保險(E;P) 財產損失保險金 78.4萬 10%\n• 30 汽車超額責任險保障型責任保險金 2,000萬\n• 31 第三人責任險-傷害[自用] 每人傷害/每事故之總額 300萬/3000萬\n• 32 第三人責任險-財損[自用] 每事故之財損 50萬\n• 56 第三人責任附加駕駛人傷害險 傷害醫療-實支實付/失能或死亡 20萬/100萬\n• 238 道路救援費用附加條款 每一事故給付上限 3萬'
   },
   {
     id: 'rec-439',
@@ -6086,7 +6086,7 @@ export const ALL_RECORDS: CarRecord[] = [
     totalCost: 11430,
     notes: '*️⃣ 施工日期：2026-08-21\n🛠️ 外廠九萬公里大保養與後煞車系統更新\n\n6️⃣ 🚗 引擎 [B46B20O0 - SULEV]\n  💠 機油：\n     ⚠️ [標準填充量：5.25 公升 (5 L + 換機油芯 0.5 L)]\n     🆕 2026-08-21 / 🛣 89,745 km\n     🆔 Castrol EDGE 5W30M: 🔄 5.5 L\n  💠 機油芯：\n     🆕 2026-08-21 / 🛣 89,745 km\n     🆔 BMW Engine Oil Filter Element [11428575211] (BMW 引擎機油濾清器濾芯): 🔄 1\n\n  💠 煞車系統：\n     ⚠️ [後輪來令片組 + 磨損感應線]\n     🆕 2026-08-21 / 🛣 89,745 km\n     🆔 BMW Brake Pad Set - Textar [2456101] (BMW 後煞車片套裝): 🔄 2 組\n     🆔 Wear Indicator - BMW [34356890791] (BMW 後煞車片磨損感應傳感器): 🔄 1 條\n     🆔 Bendix DOT4 ESP 煞車油: 🔄 1 組\n     🧹🆔 Wurth 煞車盤清潔劑 Brake Cleaner: (當次未額外計費)\n\n  🛞 輪胎對調：\n     • 前輪左右交叉對調\n     • 後輪左右交叉對調\n\n💰 工資明細：\n• 保養工資 + 電腦全車診斷：NT$1,000\n• 後煞車系統更換工資 (含行車電腦後煞車分泵電子釋放/制動)：NT$1,500\n• 總計：NT$11,430'
   },
-  {
+    {
     id: 'rec-758',
     date: '2026-08-22',
     km: 89746,
@@ -6106,7 +6106,7 @@ export const ALL_RECORDS: CarRecord[] = [
     totalCost: 43300,
     notes: '♻️ 施工期間：2026-08-22 ~ 2026-08-24\n🛠️ 引擎水路與冷卻循環系統全方位大修複修\n\n6️⃣ 🚗 引擎 [B46B20O0 - SULEV]\n  💠 平衡軸密封蓋：\n     ⚠️ [2026-08-24 / 🛣 89,746 km : 維修單註明台灣副廠零件]\n     🆕 2026-08-24 / 🛣 89,746 km\n     🆔 Engine Block Cover [11117797932] (BMW 平衡軸密封蓋): 🔄 1 組\n\n  💠 機油芯底座總成：\n     🆕 2026-08-24 / 🛣 89,746 km\n     🆔 Oil Cooler Filter Housing for BMW [11428596283] (BMW G30 機油冷卻器濾清器殼體總成): 🔄 1 組\n\n  💠 水路冷卻系統循環：\n     • [節溫器總成] ⚠️ 經技師檢視：熱管理模塊外觀正常無風化現象，保留原件。\n     • [冷卻水泵浦]\n       🆕 2026-08-24 / 🛣 89,746 km\n       🆔 Coolant Water Pump Assembly [11517644809] (BMW G30 冷卻液泵浦總成): 🔄 1 組\n     • [冷卻水管路]\n       🆕 2026-08-24 / 🛣 89,746 km\n       🆔 NEW BMW 5 G30 COOLANT HOSE [64219317614] (BMW G30 冷卻液軟管-熱水管): 🔄 1 條\n       🆕 2026-08-24 / 🛣 89,746 km\n       🆔 Coolant Radiator Coolant Hose For BMW [17128602870] (BMW 冷卻液軟管-上水管): 🔄 1 條\n     • [水管接頭/法蘭]\n       🆕 2026-08-24 / 🛣 89,746 km\n       🆔 Coolant Pipe Flange For BMW [11118511205] (BMW 冷卻液管法蘭): 🔄 1 個\n     • [長效水箱冷卻液]\n       ⚠️ [水箱精標準填充量 (藍色50%)：9.9 公升]\n       🆕 2026-08-24 / 🛣 89,746 km\n       🆔 WURTH Radiator Long-Life Coolant 長效水箱精: 🔄 8 瓶\n\n  💠 引擎積碳與進氣清潔：\n     🆕 2026-08-24 / 🛣 89,746 km\n     🧹 節氣門拆洗深層清潔\n     🧹 燃燒室積碳清潔 (⚠️ 當次未施作 None Work)\n\n💰 工資費用明細：\n• 引擎水路全拆裝工資 + 全車電腦深度診斷：NT$8,000\n• 總計：NT$43,300'
   },
-  {
+    {
     id: 'rec-448',
     date: '2026-08-30',
     km: 89856,
@@ -6132,7 +6132,7 @@ export const ALL_RECORDS: CarRecord[] = [
     km: 89858,
     category: 'maintenance',
     categoryLabel: '🛠️ 保養維修',
-    title: '全車車門與後視鏡防刮保護貼重新貼附',
+    title: '車輛外觀保護貼施作 (門邊與後視鏡)',
     vendor: '車主自行施工 (DIY)',
     fuelCost: 0,
     detailingCost: 0,
@@ -6144,6 +6144,46 @@ export const ALL_RECORDS: CarRecord[] = [
     telecomCost: 0,
     tuningCost: 0,
     totalCost: 0,
-    notes: '♻️ 施工日期：2026-08-30\n🛡️ 車輛防刮保護貼膜重貼 [DIY]\n\n📋 施作部位：\n• 全車 4 車門 (門碗/門邊防護膜)\n• 左右 2 側後視鏡防刮保護膜'
+    notes: '♻️ 施工日期：2026-08-30\n🛡️ 車輛外觀 - 保護貼施作 [DIY]\n\n📋 施作部位：\n• 全車 4 車門防刮保護貼 [DIY]\n• 左右 2 側後視鏡防護貼 [DIY]'
+  },
+  {
+    id: 'rec-759',
+    date: '2026-09-11',
+    km: 90016,
+    category: 'maintenance',
+    categoryLabel: '🛠️ 保養維修',
+    title: '車輛外觀車門保護貼與內裝方向盤防護裝配',
+    vendor: '車主自行施工 (DIY)',
+    fuelCost: 0,
+    detailingCost: 0,
+    maintenanceCost: 0,
+    taxCost: 0,
+    contractCost: 0,
+    tollCost: 0,
+    fineCost: 0,
+    telecomCost: 0,
+    tuningCost: 0,
+    totalCost: 0,
+    notes: '♻️ 施工日期：2026-09-11\n🛠️ 車輛外觀與內室防護配件裝配 [DIY]\n\n📋 施作部位：\n• 車輛外觀：全車 4 車門防刮保護貼 [DIY]\n• 車輛內室：方向盤保護套/防護膜 [DIY]'
+  },
+  {
+    id: 'rec-745',
+    date: '2026-09-13',
+    km: 90131,
+    category: 'tax_insurance',
+    categoryLabel: '🪪 稅務契約規費',
+    title: '第六年度車險線上續保 (丙式車體險及全損免折舊附加險)',
+    vendor: '知名產物保險',
+    fuelCost: 0,
+    detailingCost: 0,
+    maintenanceCost: 0,
+    taxCost: 0,
+    contractCost: 16559,
+    tollCost: 0,
+    fineCost: 0,
+    telecomCost: 0,
+    tuningCost: 0,
+    totalCost: 16559,
+    notes: '🔰 知名產險 [ 線上投保/續保 丙式車險 ]\n\n📋 保單承保明細：\n• 07 附加車體全損理賠無折舊條款\n• 09 車體損失保險丙式(E;P) 財產損失保險金 66.7萬 自負額0\n• 11 汽車竊盜損失保險(E;P) 財產損失保險金 66.7萬 10%\n• 17 竊盜險全損免折舊附加條款\n• 30 汽車超額責任險保障型責任保險金 2,000萬\n• 31 第三人責任險-傷害[自用] 每人傷害/每事故之總額 300萬/3000萬\n• 32 第三人責任險-財損[自用] 每事故之財損 50萬\n• 166 駕駛人傷害險（限車主）傷害醫療-實支實付/失能或死亡 20萬/200萬\n• 238 道路救援費用附加條款 每一事故給付上限 3萬'
   }
 ];
