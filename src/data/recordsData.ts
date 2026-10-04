@@ -6224,6 +6224,6 @@ export const ALL_RECORDS: CarRecord[] = [
     telecomCost: 0,
     tuningCost: 0,
     totalCost: 250,
-    notes: '🧼 專業水刀無接觸高壓快速洗車護理 (里程數：90,438 km)'
+    notes: '🧼 專業水刀無接觸高壓快速洗車護理 (里程數：90,438 km )'
   }
 ];
