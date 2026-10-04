@@ -6186,4 +6186,44 @@ export const ALL_RECORDS: CarRecord[] = [
     totalCost: 16559,
     notes: '🔰 知名產險 [ 線上投保/續保 丙式車險 ]\n\n📋 保單承保明細：\n• 07 附加車體全損理賠無折舊條款\n• 09 車體損失保險丙式(E;P) 財產損失保險金 66.7萬 自負額0\n• 11 汽車竊盜損失保險(E;P) 財產損失保險金 66.7萬 10%\n• 17 竊盜險全損免折舊附加條款\n• 30 汽車超額責任險保障型責任保險金 2,000萬\n• 31 第三人責任險-傷害[自用] 每人傷害/每事故之總額 300萬/3000萬\n• 32 第三人責任險-財損[自用] 每事故之財損 50萬\n• 166 駕駛人傷害險（限車主）傷害醫療-實支實付/失能或死亡 20萬/200萬\n• 238 道路救援費用附加條款 每一事故給付上限 3萬'
   }
+  {
+    id: 'rec-184',
+    date: '2026-10-02',
+    km: 90436,
+    category: 'fuel',
+    categoryLabel: '⛽ 油資紀錄',
+    title: '車輛加油',
+    vendor: '台灣中油直營門市',
+    fuelCost: 2222,
+    detailingCost: 0,
+    maintenanceCost: 0,
+    taxCost: 0,
+    contractCost: 0,
+    tollCost: 0,
+    fineCost: 0,
+    telecomCost: 0,
+    tuningCost: 0,
+    totalCost: 2222,
+    notes: '⛽ 台灣中油直營門市加油 (里程數：90,436 km)'
+  },
+  {
+    id: 'rec-449',
+    date: '2026-10-04',
+    km: 90438,
+    category: 'detailing',
+    categoryLabel: '🧼 洗車美容',
+    title: '水刀無接觸快速洗車',
+    vendor: '專業水刀快速洗車',
+    fuelCost: 0,
+    detailingCost: 250,
+    maintenanceCost: 0,
+    taxCost: 0,
+    contractCost: 0,
+    tollCost: 0,
+    fineCost: 0,
+    telecomCost: 0,
+    tuningCost: 0,
+    totalCost: 250,
+    notes: '🧼 專業水刀無接觸高壓快速洗車護理 (里程數：90,438 km)'
+  }
 ];
