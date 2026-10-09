@@ -14,6 +14,7 @@ import {
 } from 'chart.js';
 import { Bar, Doughnut, Line } from 'react-chartjs-2';
 import { CarRecord } from '../types';
+import { YEARLY_STATS } from '../data/yearlyData';
 import { BarChart3, PieChart, Activity, UploadCloud, AlertCircle } from 'lucide-react';
 
 ChartJS.register(
@@ -61,9 +62,9 @@ export const Charts: React.FC<ChartsProps> = ({ records = [] }) => {
         totalDetailing: 0,
         totalOther: 0,
         totalCost: 0,
-        efficiencyYears: [],
-        efficiencyKmL: [],
-        efficiencyKm: []
+        efficiencyYears: [] as string[],
+        efficiencyKmL: [] as (number | null)[],
+        efficiencyKm: [] as number[]
       };
     }
 
@@ -165,21 +166,30 @@ export const Charts: React.FC<ChartsProps> = ({ records = [] }) => {
     const detailingData = sortedYears.map((y) => yearMap[y].detailing);
     const otherData = sortedYears.map((y) => yearMap[y].other);
 
-    // Fuel efficiency estimations from actual data
+    // Fuel efficiency & mileage tracking based on exact telemetry statistics
+    const yearlyStatsMap = new Map<number, (typeof YEARLY_STATS)[0]>(
+      YEARLY_STATS.map((s) => [s.year, s])
+    );
+
     const efficiencyYears: string[] = [];
-    const efficiencyKmL: number[] = [];
+    const efficiencyKmL: (number | null)[] = [];
     const efficiencyKm: number[] = [];
 
     sortedYears.forEach((y) => {
-      const kmDiff =
-        yearMap[y].maxKm > yearMap[y].minKm && yearMap[y].minKm !== Infinity
-          ? yearMap[y].maxKm - yearMap[y].minKm
-          : 0;
-      if (kmDiff > 0 && yearMap[y].fuel > 0) {
-        efficiencyYears.push(`${y}年`);
+      const yearNum = Number(y);
+      const stat = yearlyStatsMap.get(yearNum);
+      efficiencyYears.push(`${y}年`);
+      if (stat) {
+        efficiencyKm.push(stat.totalKm);
+        efficiencyKmL.push(stat.fuelConsumption && stat.fuelConsumption > 0 ? stat.fuelConsumption : null);
+      } else {
+        const kmDiff =
+          yearMap[y].maxKm > yearMap[y].minKm && yearMap[y].minKm !== Infinity
+            ? yearMap[y].maxKm - yearMap[y].minKm
+            : 0;
         efficiencyKm.push(kmDiff);
-        const approxLiters = yearMap[y].fuel / 32; // ~32 NTD/L for 98
-        const kmL = approxLiters > 0 ? parseFloat((kmDiff / approxLiters).toFixed(2)) : 11.5;
+        const approxLiters = yearMap[y].fuel / 34.5;
+        const kmL = approxLiters > 0 && kmDiff > 0 ? parseFloat((kmDiff / approxLiters).toFixed(2)) : null;
         efficiencyKmL.push(kmL);
       }
     });
@@ -440,7 +450,8 @@ export const Charts: React.FC<ChartsProps> = ({ records = [] }) => {
         pointRadius: 5,
         yAxisID: 'y1',
         tension: 0.35,
-        fill: true
+        fill: true,
+        spanGaps: false
       },
       {
         type: 'bar' as const,
@@ -473,7 +484,20 @@ export const Charts: React.FC<ChartsProps> = ({ records = [] }) => {
         bodyColor: '#cbd5e1',
         borderColor: '#334155',
         borderWidth: 1,
-        padding: 12
+        padding: 12,
+        callbacks: {
+          label: (context: any) => {
+            const label = context.dataset.label || '';
+            const val = context.raw;
+            if (val === null || val === undefined) {
+              return `${label}: 尚無整年數據 (交車首月)`;
+            }
+            if (context.datasetIndex === 0) {
+              return `${label}: ${Number(val).toFixed(2)} km/L`;
+            }
+            return `${label}: ${Number(val).toLocaleString()} km`;
+          }
+        }
       }
     },
     scales: {
@@ -562,7 +586,7 @@ export const Charts: React.FC<ChartsProps> = ({ records = [] }) => {
                 {activeTab === 'yearly' ? '歷年養車支出趨勢結構 (自動即時彙整)' : '年度油耗效能 (km/L) 與行駛里程對比'}
               </h2>
               <p className="text-xs text-slate-400 font-mono-code">
-                {activeTab === 'yearly' ? '分項統計：維修保養 / 油資 / 停車租賃 / 規費稅務 / 美容' : 'B46/B48 節能曲線：根據您匯入之油資與里程動態計算'}
+                {activeTab === 'yearly' ? '分項統計：維修保養 / 油資 / 停車租賃 / 規費稅務 / 美容' : 'B46 節能效能：歷年實測加油公升數與行駛里程精密統計'}
               </p>
             </div>
           </div>
